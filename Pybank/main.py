@@ -58,7 +58,7 @@ print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decre
 
 #export analysis to txt file
 
-output_path=os.path.join( "analysis","budget_data_analysis.txt")
+output_path=os.path.join("..","PyBank", "analysis","budget_data_analysis.txt")
 with open(output_path,"w") as output_file:
     output_file.write("Financial Analysis\n")
     output_file.write("---------------------------\n")
