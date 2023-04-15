@@ -2,7 +2,7 @@ import os
 import csv
 
 #path to data Challenges/python-challenge/PyBank/Resources/budget_data.csv
-budget_data_path="/Users/familymacbook/Desktop/UCI/Challenges/python-challenge/PyBank/budget_data.csv"
+budget_data_path=os.path.join("Resources","budget_data.csv")
 
 #initialize variables
 total_months=0
@@ -66,13 +66,13 @@ print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decre
 
 #export analysis to txt file
 
-output_path="/Users/familymacbook/Desktop/UCI/Challenges/python-challenge/PyBank/analysis/analysis.txt"
+output_path=os.path.join("analysis","analysis.txt")
 with open(output_path,"w") as output_file:
     output_file.write("Financial Analysis\n")
     output_file.write("---------------------------\n")
     output_file.write(f"Total Months: {total_months}\n")
-    output_file.write(f"Total : {net_total}\n")
-    output_file.write(f"Average Change: {average_dif:.2f}\n")
+    output_file.write(f"Total : ${net_total}\n")
+    output_file.write(f"Average Change: ${average_dif:.2f}\n")
     output_file.write(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})\n")
     output_file.write(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount})\n")
 
